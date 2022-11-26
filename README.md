@@ -5,8 +5,8 @@ This is a small adaptation of the [hotTakes module](https://github.com/TheDevelo
 Future endeavours include a feature that enables user interaction (i.e., users mention the bot -> it responds with a hot take). For now though, this is very simple.
 
 ## Run it
-To run it yourself, first edit [config.template.json](./blob/main/config.template.json) to suit your needs. The configuration options should mostly be self-explanatory. `interval` is in milliseconds.
+To run it yourself, first edit [config.template.json](./config.template.json) to suit your needs. The configuration options should mostly be self-explanatory. `interval` is in milliseconds.
 
 After you've done your configuration, simply rename the file to `config.json`, run `npm install` and then `npm start`.
 
-The repository also contains a [Dockerfile](./blob/main/Dockerfile) if you prefer running via Docker.
+The repository also contains a [Dockerfile](./Dockerfile) if you prefer running via Docker.
