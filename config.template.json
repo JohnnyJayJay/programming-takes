@@ -1,0 +1,6 @@
+{
+  "visibility": "public",
+  "instance": "https://botsin.space",
+  "accessToken": "YOUR-TOKEN-HERE",
+  "interval": 10800000
+}
