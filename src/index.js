@@ -5,16 +5,20 @@ import generateHotTake from './hotTakes.js'
 
 const config = JSON.parse(readFileSync(process.cwd() + '/config.json'))
 
+function post(mastodon) {
+  const take = generateHotTake()
+  console.log("Posting: ", take)
+  mastodon.statuses.create({
+    status: take,
+    visibility: config.visibility,
+    language: 'en'
+  })
+}
+
 async function main() {
   const mastodon = await masto.login({url: config.instance, accessToken: config.accessToken})
-
-  setInterval(() => {
-    mastodon.statuses.create({
-      status: generateHotTake(),
-      visibility: config.visibility,
-      language: 'en'
-    })
-  }, config.interval)
+  post(mastodon)
+  setInterval(() => post(mastodon), config.interval)
 }
 
 main().catch(err => {
