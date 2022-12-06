@@ -19,7 +19,7 @@ const placeholders = {
 	age: () => [randomInt(1, 50).toString()],
 	bigNumber: () => [randomInt(2, 100000).toString()],
 	percentage: () => [randomInt(1, 100).toString()],
-	oneWordThing: () => mappedPlaceholders('thing', it => it.replace(' ', ''))(users),
+	oneWordThing: () => mappedPlaceholders('thing', it => it.replace(' ', ''))(),
 }
 
 
