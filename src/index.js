@@ -12,6 +12,8 @@ function post(mastodon) {
     status: take,
     visibility: config.visibility,
     language: 'en'
+  }).catch(err => {
+    console.log("Encountered error " + err)
   })
 }
 
