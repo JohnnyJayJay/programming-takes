@@ -9,4 +9,6 @@ To run it yourself, first edit [config.template.json](./config.template.json) to
 
 After you've done your configuration, simply rename the file to `config.json`, run `npm install` and then `npm start`.
 
+You can also use this to generate some hot takes without posting them anywhere. To do this, run `npm start -- --dry-run <number-of-takes>`.
+
 The repository also contains a [Dockerfile](./Dockerfile) if you prefer running via Docker.
