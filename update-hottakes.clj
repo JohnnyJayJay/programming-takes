@@ -15,12 +15,12 @@
     "The world if {anything} was mainstream"
     "Average {thing} user vs average {thing} enjoyer"})
 
-(def hottake-data
-  (-> hottake-data-url
-      slurp
-      (json/parse-string true)
-      (->> (map (fn [[k v]]
-                  [k (remove exclusions (map #(or (:take %) %) v))]))
-           (into {}))
-      (json/generate-string {:pretty pretty-printer})
-      println))
+
+(-> hottake-data-url
+    slurp
+    (json/parse-string true)
+    (->> (map (fn [[k v]]
+                [k (remove exclusions (map #(or (:take %) %) v))]))
+         (into {}))
+    (json/generate-string {:pretty pretty-printer})
+    println)
